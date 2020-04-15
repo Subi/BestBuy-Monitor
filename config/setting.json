@@ -2,6 +2,6 @@
     "Discord":{
         "Webhook": ""
     },
-    "Skus":[""],
+    "Skus":[],
     "Interval": 5000
 }
