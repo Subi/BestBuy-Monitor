@@ -14,7 +14,7 @@ const store = product => {
             console.log(chalk.red(`Error occured finding product in database ${err}`))
         }
         if(!foundProduct){
-            stock.save()
+            item.save()
             console.log(chalk.green(`${item.Name} is available`))
             notification.send(product)
         }
