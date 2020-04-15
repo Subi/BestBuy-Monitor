@@ -1,5 +1,5 @@
 const request =  require('./src/request');
-const config = require('./Config/setting.json');
+const config = require('./config/setting.json');
 const chalk = require('chalk');
 const mongoose = require('mongoose');
 

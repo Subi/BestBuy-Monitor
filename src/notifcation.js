@@ -1,6 +1,6 @@
 const axios = require('axios');
 const moment = require('moment');
-const config = require('../Config/setting.json')
+const config = require('../config/setting.json')
 const chalk = require('chalk')
 
 async function send(product){

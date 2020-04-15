@@ -1,5 +1,4 @@
 
-const chalk = require('chalk')
 const db = require('../database')
 
 const stock = data => {
