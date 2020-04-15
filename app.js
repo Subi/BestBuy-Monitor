@@ -20,7 +20,7 @@ const checkConfig = () =>  {
         console.log(chalk.red("Make sure to insert a discord webhook in the setting.json file"))
         process.exit(1)
     }
-    if(config.Skus.length != 1){
+    if(config.Skus.length < 1){
         console.log(chalk.red("Make sure to insert a sku into the \" skus array [] \" "))
         process.exit(1)
     }
