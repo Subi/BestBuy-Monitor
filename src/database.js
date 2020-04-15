@@ -1,4 +1,4 @@
-const Product = require('./src/model/Product')
+const Product = require('../src/model/Product')
 const notification = require('./src/notifcation')
 const chalk = require("chalk")
 
