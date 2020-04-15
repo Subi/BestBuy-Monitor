@@ -1,7 +1,10 @@
 # BestBuy-Monitor
 
-Watches BestBuy products and notifies the user via Discord webhooks when the product is in stock!
 
+![Nintendo-Switch](https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6364/6364255_sa.jpg;maxHeight=640;maxWidth=550)
+
+ Project was created to assist those who needed a way to watch products on BestBuy's website mainly the Nintendo-Switch. Other Item can be monitored as well , just need the sku number for the product! I hope you guys enjoy this project 
+ 
 
 ### Get Started 
 
