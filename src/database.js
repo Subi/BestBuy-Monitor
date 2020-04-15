@@ -1,5 +1,5 @@
 const Product = require('../src/model/Product')
-const notification = require('./src/notifcation')
+const notification = require('../src/notifcation')
 const chalk = require("chalk")
 
 
@@ -15,7 +15,7 @@ const store = product => {
         }
         if(!foundProduct){
             item.save()
-            console.log(chalk.green(`${item.Name} is available`))
+            console.log(chalk.green(`${item.name} is available`))
             notification.send(product)
         }
         checkforRestock(item)
