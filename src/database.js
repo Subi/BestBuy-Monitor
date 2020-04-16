@@ -9,7 +9,7 @@ const store = product => {
         console.log(chalk.red(item))
         return
     }
-    Product.findOne({Name: product.name} , (err , foundProduct) => {
+    Product.findOne({name: product.name} , (err , foundProduct) => {
         if(err){
             console.log(chalk.red(`Error occured finding product in database ${err}`))
         }
