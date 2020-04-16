@@ -15,8 +15,9 @@ const store = product => {
         }
         if(!foundProduct){
             item.save()
-            console.log(chalk.green(`${item.name} is available`))
-            notification.send(product)
+            if(item.status != "SOLD_OUT"){
+                notification.send(product)
+            }
         }
         checkforRestock(item)
     })
@@ -25,11 +26,11 @@ const store = product => {
 const checkforRestock = item =>{
     Product.findOneAndUpdate({name: item.name , status: { $ne:item.status } } , {$set: {Status: item.status}} , {new: true} , (err , updatedProduct) => {
         if(err) return
-        if(!updatedProduct){
-            return
+        if(!updatedProduct) return
+        console.log(chalk.red(`${updatedProduct.name} item status has been updated`))
+        if(item.status != "SOLD_OUT"){
+            notification.send(item)
         }
-        console.log(chalk.red(`${updatedProduct} item status has been updated`))
-        notification.send(item)
     } )
 }
 
