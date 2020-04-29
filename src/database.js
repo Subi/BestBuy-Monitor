@@ -15,7 +15,7 @@ const store = product => {
         }
         if(!foundProduct){
             item.save()
-            if(item.status != "SOLD_OUT"){
+            if(item.status != "SOLD_OUT" || item.status != "CHECK_STORES"){
                 notification.send(product)
             }
         }
@@ -28,7 +28,7 @@ const checkforRestock = item =>{
         if(err) return
         if(!updatedProduct) return
         console.log(chalk.red(`${updatedProduct.name} item status has been updated`))
-        if(item.status != "SOLD_OUT"){
+        if(item.status != "SOLD_OUT" || item.status != "CHECK_STORES"){
             notification.send(item)
         }
     } )
