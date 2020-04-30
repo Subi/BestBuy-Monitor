@@ -15,7 +15,7 @@ const store = product => {
         }
         if(!foundProduct){
             item.save()
-            if(item.status == "ADD_TO_CART"){
+            if(item.status === "ADD_TO_CART"){
                 notification.send(product)
             }
         }
@@ -28,7 +28,7 @@ const checkforRestock = item =>{
         if(err) return
         if(!updatedProduct) return
         console.log(chalk.red(`${updatedProduct.name} item status has been updated`))
-        if(item.status != "ADD_TO_CART"){
+        if(item.status === "ADD_TO_CART"){
             notification.send(item)
         }
     } )
