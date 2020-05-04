@@ -9,12 +9,13 @@ const store = product => {
         console.log(chalk.red(item))
         return
     }
-    Product.findOne({name: product.name} , (err , foundProduct) => {
+    Product.findOne({name: product.Name} , (err , foundProduct) => {
         if(err){
             console.log(chalk.red(`Error occured finding product in database ${err}`))
         }
         if(!foundProduct){
             item.save()
+            console.log(chalk.red(`${product.Name} was saved to the database`))
             if(item.status === "ADD_TO_CART"){
                 notification.send(product)
             }
@@ -24,7 +25,7 @@ const store = product => {
 }
 
 const checkforRestock = item =>{
-    Product.findOneAndUpdate({name: item.name , status: { $ne:item.status } } , {$set: {Status: item.status}} , {new: true} , (err , updatedProduct) => {
+    Product.findOneAndUpdate({name: item.name , status: { $ne: item.status } } , {$set: {status: item.status}}  , {new: true} ,  (err , updatedProduct) => {
         if(err) return
         if(!updatedProduct) return
         console.log(chalk.red(`${updatedProduct.name} item status has been updated`))
