@@ -1,5 +1,6 @@
 # BestBuy-Monitor
 
+[![Run on Repl.it](https://repl.it/badge/github/Neguhs/BestBuy-Monitor)](https://repl.it/github/Neguhs/BestBuy-Monitor)
 
 ![Nintendo-Switch](https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6364/6364255_sa.jpg;maxHeight=640;maxWidth=550)
 
